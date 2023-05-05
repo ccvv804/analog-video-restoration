@@ -17,7 +17,7 @@ https://user-images.githubusercontent.com/54245389/236490207-07b53412-6c99-44c4-
 
 복구 후 1
 ## 설치 방법? 
-* Windows 11 PowerShell 기준입니다.
+* Windows 11 PowerShell 기준입니다. 리눅스는 조금 다를 수 있습니다.
 * 8GB VRAM 이상을 가진 엔비디아 그래픽카드 기준? 4070ti 12GB 그래픽카드에서 테스트 되었습니다.
 * git하고 파이썬 3.10을 먼저 설치해야 합니다. 물론 PATH 등록은 해야합니다.
 ### 프로그램 설치
