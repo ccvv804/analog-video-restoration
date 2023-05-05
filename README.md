@@ -1,3 +1,36 @@
+## 설치 방법 
+### 프로그램 설치
+* 8GB VRAM 이상을 가진 엔비디아 그래픽카드 기준? 4070ti 12GB 그래픽카드에서 테스트 되었습니다.
+* git하고 파이썬 3.10을 먼저 설치해야 합니다.
+```sh
+git clone https://github.com/ccvv804/analog-video-restoration
+cd analog-video-restoration
+python -m venv venv
+.\venv\Scripts\activate
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install opencv-python
+pip install pytorch-lightning
+pip install einops
+```
+### 모델 설치
+[Google Drive](https://drive.google.com/drive/folders/1omIk6qHKqbvO7T09Ixiez7zq08S7OaxE?usp=share_link)에서 모델을 다운로드 받고. ```analog-video-restoration``` 폴더에 ```pretrained_models``` 라는 폴더를 만들고 들어간 다음 ```video_swin_unet``` 라는 폴더를 만든 다음 모델 파일 ```best.ckpt```을 넣습니다. 
+
+## 사용 방법
+### 영상 전처리
+* 디인터레이스 처리된 60 프레임 4:3 영상을 ffmpeg로 처리하는 경우.
+```sh
+mkdir test111
+ffmpeg -i test111.mp4 -r 60 -vf "scale=512:512:flags=bicubic,setsar=1/1" -qscale:v 2 test111/%00d.jpg
+```
+### 스크립트 가동
+* 60 프레임 영상 기준
+* 59.94 프레임이나 29.97 프레임은 지원하지 않습니다.
+```sh
+.\venv\Scripts\activate
+python src/real_world_test.py --experiment-name video_swin_unet --data-base-path .\test111 --patch-size 512 --fps 60
+```
+## 선 이하는 원본 저장소 설명
+***
 # Restoration of Analog Videos Using Swin-UNet
 
 This application is part of the **ReInHerit Toolkit**.
