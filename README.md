@@ -1,8 +1,8 @@
 ## 설치 방법 
 * Windows 11 PowerShell 기준입니다.
-### 프로그램 설치
 * 8GB VRAM 이상을 가진 엔비디아 그래픽카드 기준? 4070ti 12GB 그래픽카드에서 테스트 되었습니다.
-* git하고 파이썬 3.10을 먼저 설치해야 합니다.
+* git하고 파이썬 3.10을 먼저 설치해야 합니다. 물론 PATH 등록은 해야합니다.
+### 프로그램 설치
 ```sh
 git clone https://github.com/ccvv804/analog-video-restoration
 cd analog-video-restoration
