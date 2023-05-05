@@ -12,7 +12,6 @@ https://user-images.githubusercontent.com/54245389/236490036-6554a546-739b-4492-
 https://user-images.githubusercontent.com/54245389/236490207-07b53412-6c99-44c4-a934-dc1ec745101a.mp4
 
 복구 후 1
-
 ## 설치 방법 
 * Windows 11 PowerShell 기준입니다.
 * 8GB VRAM 이상을 가진 엔비디아 그래픽카드 기준? 4070ti 12GB 그래픽카드에서 테스트 되었습니다.
