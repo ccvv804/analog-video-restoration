@@ -6,7 +6,7 @@
 * 영상 떨림 억제 시도
 * 비정상적인 드롭아웃 보정 시도
 * 적극적인 노이즈 억제
-## 무면허 시연 영상
+## 야매 시연 영상
 https://user-images.githubusercontent.com/54245389/236490036-6554a546-739b-4492-ba35-6b507383d1fb.mp4
 
 복구 전 1
@@ -14,7 +14,7 @@ https://user-images.githubusercontent.com/54245389/236490036-6554a546-739b-4492-
 https://user-images.githubusercontent.com/54245389/236490207-07b53412-6c99-44c4-a934-dc1ec745101a.mp4
 
 복구 후 1
-## 설치 방법 
+## 야매 설치 방법 
 * Windows 11 PowerShell 기준입니다.
 * 8GB VRAM 이상을 가진 엔비디아 그래픽카드 기준? 4070ti 12GB 그래픽카드에서 테스트 되었습니다.
 * git하고 파이썬 3.10을 먼저 설치해야 합니다. 물론 PATH 등록은 해야합니다.
@@ -32,7 +32,7 @@ pip install einops
 ### 모델 설치
 [Google Drive](https://drive.google.com/drive/folders/1omIk6qHKqbvO7T09Ixiez7zq08S7OaxE?usp=share_link)에서 모델을 다운로드 받고 ```analog-video-restoration``` 폴더에 ```pretrained_models``` 라는 폴더를 만들고 들어간 다음 ```video_swin_unet``` 라는 폴더를 만들고 들어간 다음 ```best.ckpt```을 넣습니다. 
 
-## 사용 방법
+## 야매 사용 방법
 ### 영상 전처리
 * 디인터레이스 처리가 되어 있지 않은 영상을 권장합니다.
 ```sh
@@ -49,7 +49,7 @@ python src/real_world_test.py --experiment-name video_swin_unet --data-base-path
 ```sh
 ffmpeg -r 59.94 -i ./results/video_swin_unet/test1/%00d.jpg -i test1.mkv -map 0:v:0 -map 1:a:0 -c:a aac -b:a 160k -c:v h264_nvenc -vf "yadif=1:-1:0,crop=512:480:0:0,scale=640:480:flags=bicubic,setsar=1/1"-profile:v main -preset p7 -tune:v hq -cq 23 -r 59.94 -pix_fmt yuv420p test1-out.mp4
 ```
-## 이하는 원본 저장소 설명
+## 이하는 원본 저장소에서 온 원본 소개입니다.
 ***
 # Restoration of Analog Videos Using Swin-UNet
 
