@@ -21,7 +21,7 @@ pip install einops
 
 ## 사용 방법
 ### 영상 전처리
-* 디인터레이스 처리가 되어 있지 않은 영상만 가능합니다.
+* 디인터레이스 처리가 되어 있지 않은 영상을 권장합니다.
 ```sh
 mkdir test1
 ffmpeg -i test1.mkv -r 59.94 -vf "scale=512:480:flags=bicubic,pad=512:512,setsar=1/1" -qscale:v 2 test1/%00d.jpg
