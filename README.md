@@ -22,16 +22,18 @@ pip install einops
 * 디인터레이스 처리가 되어 있지 않은 4:3 영상을 ffmpeg로 처리하는 경우.
 ```sh
 mkdir test1
-ffmpeg -i test1.mkv -r 60 -vf "scale=512:480:flags=bicubic,pad=512:512,setsar=1/1" -qscale:v 2 test1/%00d.jpg
+ffmpeg -i test1.mkv -r 59.94 -vf "scale=512:480:flags=bicubic,pad=512:512,setsar=1/1" -qscale:v 2 test1/%00d.jpg
 ```
 ### 스크립트 가동
-* 60 프레임 영상 기준
-* 59.94 프레임이나 29.97 프레임은 지원하지 않습니다.
 ```sh
 .\venv\Scripts\activate
 python src/real_world_test.py --experiment-name video_swin_unet --data-base-path .\test1 --patch-size 512 --fps 60
 ```
-그러면 results 폴더에 결과물이 저장됩니다. 후처리는 알아서 하시면 됩니다.
+그러면 results 폴더에 결과물이 저장됩니다.
+### 영상 후처리
+```sh
+ffmpeg -r 59.94 -i ./results/video_swin_unet/test4/%00d.jpg -i test4.mkv -map 0:v:0 -map 1:a:0 -c:a copy -c:v hevc_nvenc -vf "yadif=1:-1:0,crop=512:480:0:0,scale=640:480:flags=bicubic,setsar=1/1"-profile:v main -preset p7 -tune:v hq -cq 23 -r 59.94 -pix_fmt yuv420p test4-out.mkv
+```
 ## 이하는 원본 저장소 설명
 ***
 # Restoration of Analog Videos Using Swin-UNet
