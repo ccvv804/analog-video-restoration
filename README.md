@@ -1,4 +1,6 @@
 # [miccunifi](https://github.com/miccunifi)의 Swin-UNet을 이용한 아날로그 비디오 복구 도구
+Media Integration and Communication Center에서 개발하고 공개한 도구에 사용 방법만 적었습니다.
+
 고품질 또는 전문적인 변환 환경에서 재생하였으나 테이프 데미지 등으로 영상 표출에 문제가 있는 경우 영상을 복구하려고 시도하는 툴입니다. 
 
 부작용이 상당히 강한 도구이니 최후의 수단으로 사용하세요.
