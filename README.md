@@ -19,7 +19,7 @@ pip install einops
 
 ## 사용 방법
 ### 영상 전처리
-* 디인터레이스 처리된 60 프레임 4:3 영상을 ffmpeg로 처리하는 경우.
+* 디인터레이스 처리가 되어 있지 않아야 합니다. 60 프레임 4:3 영상을 ffmpeg로 처리하는 경우.
 ```sh
 mkdir test111
 ffmpeg -i test111.mp4 -r 60 -vf "scale=512:512:flags=bicubic,setsar=1/1" -qscale:v 2 test111/%00d.jpg
