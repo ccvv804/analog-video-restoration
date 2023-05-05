@@ -34,7 +34,7 @@ python src/real_world_test.py --experiment-name video_swin_unet --data-base-path
 그러면 results 폴더에 결과물이 저장됩니다.
 ### 영상 후처리
 ```sh
-ffmpeg -r 59.94 -i ./results/video_swin_unet/test4/%00d.jpg -i test4.mkv -map 0:v:0 -map 1:a:0 -c:a copy -c:v hevc_nvenc -vf "yadif=1:-1:0,crop=512:480:0:0,scale=640:480:flags=bicubic,setsar=1/1"-profile:v main -preset p7 -tune:v hq -cq 23 -r 59.94 -pix_fmt yuv420p test4-out.mkv
+ffmpeg -r 59.94 -i ./results/video_swin_unet/test1/%00d.jpg -i test1.mkv -map 0:v:0 -map 1:a:0 -c:a aac -b:a 160k -c:v h264_nvenc -vf "yadif=1:-1:0,crop=512:480:0:0,scale=640:480:flags=bicubic,setsar=1/1"-profile:v main -preset p7 -tune:v hq -cq 23 -r 59.94 -pix_fmt yuv420p test1-out.mp4
 ```
 ## 이하는 원본 저장소 설명
 ***
