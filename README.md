@@ -29,6 +29,7 @@ ffmpeg -i test111.mp4 -r 60 -vf "scale=512:512:flags=bicubic,setsar=1/1" -qscale
 .\venv\Scripts\activate
 python src/real_world_test.py --experiment-name video_swin_unet --data-base-path .\test111 --patch-size 512 --fps 60
 ```
+그러면 results 폴더에 결과물이 저장됩니다. 그 이상의 후처리는 알아서~
 ## 선 이하는 원본 저장소 설명
 ***
 # Restoration of Analog Videos Using Swin-UNet
