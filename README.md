@@ -1,10 +1,10 @@
 # [miccunifi](https://github.com/miccunifi)의 Swin-UNet을 이용한 아날로그 비디오 복구 도구
 Media Integration and Communication Center에서 개발하고 공개한 도구에 간단한 사용 방법만 적었습니다.
 
-고품질 또는 전문적인 변환 환경에서 재생하였으나 테이프 데미지 등으로 영상 표출에 문제가 있는 경우 영상을 복구하려고 시도하는 툴입니다. 
+고품질 또는 전문적인 아날로그 비디오를 변환했으나 비디오테이프 데미지 등으로 영상 표출에 문제가 있는 경우 영상을 복구하려고 시도하는 툴입니다. 
 
 부작용이 상당히 강한 도구이니 최후의 수단으로 사용하세요.
-## 특징
+## 특징?
 * 영상 떨림 억제 시도
 * 비정상적인 드롭아웃 보정 시도
 * 적극적인 노이즈 억제
@@ -34,7 +34,7 @@ pip install einops
 ### 모델 설치
 [Google Drive](https://drive.google.com/drive/folders/1omIk6qHKqbvO7T09Ixiez7zq08S7OaxE?usp=share_link)에서 모델을 다운로드 받고 ```analog-video-restoration``` 폴더에 ```pretrained_models``` 라는 폴더를 만들고 들어간 다음 ```video_swin_unet``` 라는 폴더를 만들고 들어간 다음 ```best.ckpt```을 넣습니다. 
 
-## 사용 방법
+## 사용 방법?
 ### 영상 전처리
 * 디인터레이스 처리가 되어 있지 않은 영상을 권장합니다?
 ```sh
