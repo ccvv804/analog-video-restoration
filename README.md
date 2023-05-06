@@ -21,7 +21,7 @@ https://user-images.githubusercontent.com/54245389/236490207-07b53412-6c99-44c4-
 ### 요구사항
 * 아무런 수정 없이는 엔비디아 RTX 그래픽카드가 필요합니다.
   * CPU나 AMD 라데온 RX 그래픽카드에서는 torch 설치 버전 변경하고 ```src/run.py``` 수정이 필요합니다.
-  * patch size 512 기준 8GB 정도의 VRAM이 필요한 것으로 보입니다. 4070ti 12GB에서의 처리 속도는 1초당 대략 2fps 입니다.
+  * patch size 512 기준 8GB 정도의 VRAM이 필요한 것으로 보입니다.
   * patch size 640 기준 10GB 정도의 VRAM이 필요한 것으로 보입니다.
   * patch size 704 기준 12GB 정도의 VRAM이 필요한 것으로 보입니다.
   * patch size 768 기준 12GB 정도의 VRAM에서는 작업할 수 없습니다.
