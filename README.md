@@ -1,5 +1,5 @@
 # [miccunifi](https://github.com/miccunifi)의 Swin-UNet을 이용한 아날로그 비디오 복구 도구
-Media Integration and Communication Center에서 개발하고 공개한 도구에 간단한 사용 방법만 적었습니다.
+Media Integration and Communication Center에서 개발하고 공개한 도구를 대충 개조했습니다.
 
 고품질 또는 전문적인 변환 시스템으로 아날로그 비디오를 변환했으나 비디오테이프 데미지 등으로 영상 표출에 문제가 있는 경우 영상을 복구하려고 시도하는 툴입니다. 
 
@@ -20,12 +20,13 @@ https://user-images.githubusercontent.com/54245389/236490207-07b53412-6c99-44c4-
 * Windows 11 PowerShell 기준입니다. 리눅스는 조금 다를 수 있습니다.
 ### 요구사항
 * 아무런 수정 없이는 엔비디아 RTX 그래픽카드가 필요합니다.
-  * CPU나 AMD 그래픽카드에서는 torch 설치 버전 변경하고 프로그램 src/run.py 수정이 필요합니다.
+  * CPU나 AMD 라데온 RX 그래픽카드에서는 torch 설치 버전 변경하고 ```src/run.py``` 수정이 필요합니다.
   * patch size 512 기준 8GB 정도의 VRAM이 필요한 것으로 보입니다.
+  * patch size 768 기준 12GB 정도의 VRAM이 필요한 것으로 보입니다.
   * 4070ti 12GB에서의 처리 속도는 1초당 대략 2.1fps 입니다.
 * git, Python 3.10, ffmpeg, ffprobe가 필요합니다.
   * 윈도우라면 PATH 등록이 필요합니다. git과 파이썬은 설치 단계에서 PATH 등록이 가능합니다.
-  * ffmpeg 하고 ffprobe의 PATH 설정이 어려운 경우 analog-video-restoration 폴더에 ffmpeg.exe하고 ffprobe.exe를 두면 됩니다.
+  * ffmpeg 하고 ffprobe의 PATH 설정이 어려운 경우 ```analog-video-restoration``` 폴더에 ```ffmpeg.exe```하고 ```ffprobe.exe```를 두면 됩니다.
 ### 프로그램 설치
 ```sh
 git clone https://github.com/ccvv804/analog-video-restoration
