@@ -26,16 +26,16 @@ def mainrun(args):
             field_or_frame=""
         elif readfps=="30000/1001" and args.double:
             print("double on")
+            readfps=="60000/1001"
             readfps2="60000/1001"
             field_or_frame="yadif=1:-1:0"
         elif readfps=="60000/1001" and args.double:    
             print("double on?")
-            readfps="30000/1001"
             field_or_frame="yadif=1:-1:0"
         elif readfps=="60000/1001":    
             print("forced double off")
             readfps="30000/1001"
-            readfps2="60000/1001"
+            readfps2="30000/1001"
         elif readfps=="30000/1001":
             print("forced double off")
         else :
