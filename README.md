@@ -5,8 +5,8 @@ Media Integration and Communication Center에서 개발하고 공개한 도구�
 
 부작용이 상당히 강한 도구이니 신중하게 사용하세요.
 ## 특징?
-* 비정상적인 영상 떨림 억제 시도
-* 비정상적인 드롭아웃 보정 시도
+* 비정상적인 영상 떨림 억제 시도?
+* 비정상적인 드롭아웃 보정 시도?
 * 적극적인 노이즈 억제
 ## 시연 영상?
 https://user-images.githubusercontent.com/54245389/236490036-6554a546-739b-4492-ba35-6b507383d1fb.mp4
