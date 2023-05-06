@@ -18,10 +18,13 @@ https://user-images.githubusercontent.com/54245389/236490207-07b53412-6c99-44c4-
 복구 후 1
 ## 설치 방법? 
 * Windows 11 PowerShell 기준입니다. 리눅스는 조금 다를 수 있습니다.
-* 엔비디아 그래픽카드 환경에서 사용할 수 있는 세팅입니다.
-  * 4070ti 12GB에서 테스트 되었으며 처리 속도는 1초당 대략 2.1fps 입니다.
-  * 8GB 정도의 VRAM이 필요한 것으로 보입니다.
-* git하고 파이썬 3.10이 필요하며, PATH 등록도 필요합니다.
+### 요구사항
+* 엔비디아 RTX 그래픽카드가 필요합니다.
+  * 최소 8GB 정도의 VRAM이 필요한 것으로 보입니다.
+  * 4070ti 12GB에서의 처리 속도는 1초당 대략 2.1fps 입니다.
+* git, Python 3.10, ffmpeg, ffprobe가 필요합니다.
+  * 윈도우라면 PATH 등록이 필요합니다. git과 파이썬은 설치 단계에서 PATH 등록이 가능합니다.
+  * ffmpeg 하고 ffprobe의 PATH 설정이 어려운 경우 analog-video-restoration 폴더에 ffmpeg.exe하고 ffprobe.exe를 두면 됩니다.
 ### 프로그램 설치
 ```sh
 git clone https://github.com/ccvv804/analog-video-restoration
@@ -37,21 +40,9 @@ pip install einops
 [Google Drive](https://drive.google.com/drive/folders/1omIk6qHKqbvO7T09Ixiez7zq08S7OaxE?usp=share_link)에서 모델을 다운로드 받고 ```analog-video-restoration``` 폴더에 ```pretrained_models``` 라는 폴더를 만들고 들어간 다음 ```video_swin_unet``` 라는 폴더를 만들고 들어간 다음 ```best.ckpt```을 넣습니다. 
 
 ## 사용 방법?
-### 영상 전처리
 * 디인터레이스 처리가 되어 있지 않은 영상을 권장합니다?
 ```sh
-mkdir test1
-ffmpeg -i test1.mkv -r 59.94 -vf "scale=512:480:flags=bicubic,pad=512:512,setsar=1/1" -qscale:v 2 test1/%00d.jpg
-```
-### 스크립트 가동
-```sh
-.\venv\Scripts\activate
-python src/real_world_test.py --experiment-name video_swin_unet --data-base-path .\test1 --patch-size 512 --fps 60
-```
-그러면 results 폴더에 결과물이 저장됩니다.
-### 영상 후처리
-```sh
-ffmpeg -r 59.94 -i ./results/video_swin_unet/test1/%00d.jpg -i test1.mkv -map 0:v:0 -map 1:a:0 -c:a aac -b:a 160k -c:v h264_nvenc -vf "yadif=1:-1:0,crop=512:480:0:0,scale=640:480:flags=bicubic,setsar=1/1"-profile:v main -preset p7 -tune:v hq -cq 23 -r 59.94 -pix_fmt yuv420p test1-out.mp4
+python src/run.py -p 512 -i test1.mkv
 ```
 ## 이하는 원본 저장소에서 온 원본 소개입니다.
 ***
