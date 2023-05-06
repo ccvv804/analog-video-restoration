@@ -53,7 +53,6 @@ python src/run.py -p 512 -i test1.mkv
  * ```-p``` : patch size를 의미하며 512 이상의 64 배수이어야 하며 크면 클수록 더 많은 VRAM이 필요합니다. 기본값은 512
  * ```-v``` : 동영상이 이미 디인터레이스 처리되어 프로그레시브인 경우에 사용하면 됩니다. 기본 미적용.
  * ```-d``` : 더블 프레임레이트를 적용하는 경우 사용하시면 됩니다. 기본 미적용.
-   * 
 ## 이하는 원본 README입니다.
 ***
 # Restoration of Analog Videos Using Swin-UNet
