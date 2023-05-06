@@ -19,8 +19,9 @@ https://user-images.githubusercontent.com/54245389/236490207-07b53412-6c99-44c4-
 ## 설치 방법? 
 * Windows 11 PowerShell 기준입니다. 리눅스는 조금 다를 수 있습니다.
 ### 요구사항
-* 엔비디아 RTX 그래픽카드가 필요합니다.
-  * 최소 8GB 정도의 VRAM이 필요한 것으로 보입니다.
+* 아무런 수정 없이는 엔비디아 RTX 그래픽카드가 필요합니다.
+  * CPU나 AMD 그래픽카드에서는 torch 설치 버전 변경하고 프로그램 src/run.py 수정이 필요합니다.
+  * patch size 512 기준 8GB 정도의 VRAM이 필요한 것으로 보입니다.
   * 4070ti 12GB에서의 처리 속도는 1초당 대략 2.1fps 입니다.
 * git, Python 3.10, ffmpeg, ffprobe가 필요합니다.
   * 윈도우라면 PATH 등록이 필요합니다. git과 파이썬은 설치 단계에서 PATH 등록이 가능합니다.
@@ -44,7 +45,7 @@ pip install einops
 ```sh
 python src/run.py -p 512 -i test1.mkv
 ```
-## 이하는 원본 저장소에서 온 원본 소개입니다.
+## 이하는 원본 README입니다.
 ***
 # Restoration of Analog Videos Using Swin-UNet
 
