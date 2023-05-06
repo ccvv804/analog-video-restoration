@@ -45,6 +45,7 @@ pip install einops
 ## 사용 방법?
 * 디인터레이스 처리가 되어 있지 않은 영상을 권장합니다?
 ```sh
+.\venv\Scripts\activate
 python src/run.py -p 512 -i test1.mkv
 ```
 ## 이하는 원본 README입니다.
