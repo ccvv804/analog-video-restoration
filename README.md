@@ -43,7 +43,6 @@ pip install einops
 [Google Drive](https://drive.google.com/drive/folders/1omIk6qHKqbvO7T09Ixiez7zq08S7OaxE?usp=share_link)에서 모델을 다운로드 받고 ```analog-video-restoration``` 폴더에 ```pretrained_models``` 라는 폴더를 만들고 들어간 다음 ```video_swin_unet``` 라는 폴더를 만들고 들어간 다음 ```best.ckpt```을 넣습니다. 
 
 ## 사용 방법?
-* 디인터레이스 처리가 되어 있지 않은 영상을 권장합니다?
 ```sh
 .\venv\Scripts\activate
 python src/run.py -p 512 -i test1.mkv
