@@ -9,13 +9,7 @@ Media Integration and Communication Center에서 개발하고 공개한 도구�
 * 비정상적인 드롭아웃 보정 시도?
 * 적극적인 노이즈 억제
 ## 시연 영상?
-https://user-images.githubusercontent.com/54245389/236490036-6554a546-739b-4492-ba35-6b507383d1fb.mp4
-
-복구 전 1
-
-https://user-images.githubusercontent.com/54245389/236490207-07b53412-6c99-44c4-a934-dc1ec745101a.mp4
-
-복구 후 1
+https://user-images.githubusercontent.com/54245389/236802520-ec6c92b8-2ab9-43ff-8efd-47cc8f275442.mp4
 ## 설치 방법? 
 * Windows 11 PowerShell 기준입니다. 리눅스는 조금 다를 수 있습니다.
 ### 요구사항
