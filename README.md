@@ -28,7 +28,7 @@ git clone https://github.com/ccvv804/analog-video-restoration
 cd analog-video-restoration
 python -m venv venv
 .\venv\Scripts\activate
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install opencv-python
 pip install pytorch-lightning
 pip install einops
